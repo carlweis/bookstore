@@ -9,6 +9,7 @@ class CreateProducts < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_index :title, unique: true
+    add_index :products, :title, :unique => true
+
   end
 end
