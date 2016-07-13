@@ -1,4 +1,5 @@
 @import "neat";
+@import "helpers";
 @import "scaffolds";
 @import "products";
 @import "store";
@@ -78,6 +79,6 @@ html, body {
   }
 
   #cart {
-    @include span-columns(3);  
+    @include span-columns(3);
   }
 }

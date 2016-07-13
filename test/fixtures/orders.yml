@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: John Smith
+  address: 1223 West Main Street, Dallas TX 75224
+  email: jsmith@example.com
+  pay_type: Credit card
+
+two:
+  name: Sally Green
+  address: 1801 Red River Rd, Fort Worth TX 75224
+  email: sally.green@example.com
+  pay_type: Paypal
