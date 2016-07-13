@@ -8,7 +8,7 @@
   <% @products.each do |product| %>
     <% cache ['entry', product] do %>
       <div class="entry">
-        <%= image_tag(product.image_url) %>
+        <%= image_tag(product.image_url, title: 'Add to Cart') %>
         <h3><%= product.title %></h3>
         <p><%= truncate(product.description, length: 50) %></p>
         <div class="price_line">
