@@ -1,0 +1,10 @@
+## Customize the test machine
+machine:
+
+  timezone:
+    America/Chicago # Set the timezone
+
+  # Version of ruby to use
+  ruby:
+    version:
+      2.3.1p112-falcon-perf
