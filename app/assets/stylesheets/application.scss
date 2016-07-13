@@ -72,6 +72,10 @@ html, body {
 
   #main {
     @include span-columns(9);
+
+    @media (max-width: 600px) {
+      @include span-columns(12);
+    }
     padding: 1em;
     background: #fff;
     height: 100%;

@@ -13,6 +13,17 @@
   .entry {
     @include span-columns(3);
     @include omega(5n);
+
+    @media (max-width: 768px) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @media (max-width: 500px) {
+      @include span-columns(12);
+      @include omega(1n);
+    }
+
     background: #F5F5F5;
     padding: 1em;
     margin-bottom: 1em;
