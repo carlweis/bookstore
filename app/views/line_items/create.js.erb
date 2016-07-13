@@ -1,4 +1,9 @@
+// fade-in the cart, if it has any items
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+
+// render the new item added to the cart
 $('#cart').html("<%= escape_javascript render(@cart) %>");
 
+// highlight the newly added cart item
 $('#current_item').css({'background-color': '#99CC33'}).
   animate({'background-color':'#EBF5D6'}, 1000);
