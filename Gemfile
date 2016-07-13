@@ -11,13 +11,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma' # multi-threaded server
 gem 'kaminari' # pagination
 
+# normally this would only go under development and test group
+# it's used here for seeding production data for the example
+gem 'ffaker'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
   gem 'byebug'
-  gem 'ffaker'  
 end
 
 group :development do
