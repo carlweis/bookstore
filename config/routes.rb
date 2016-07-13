@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  resources :products
+  resources :products do
+    get :who_bought, on: :member
+  end
 
   # Root url
   root 'store#index', as: 'store'
