@@ -14,12 +14,19 @@
  *= require_self
  */
 
+html, body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #banner {
-  background: #9c9;
+  background: #708090;
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #ddd;
   text-align: center;
 
   img {
@@ -37,26 +44,30 @@
 }
 
 #columns {
-  background: #141;
+  background: #c5d7b2;
+  height: 100%;
+  min-height: 100%;
 
   #main {
     margin-left: 17em;
     padding: 1em;
     background: #fff;
+    height: 100%;
+    min-height: 100%;
   }
 
   #side {
     float: left;
     padding: 1em 2em;
     width: 13em;
-    background: #141;
+    background: #c5d7b2;
     clear: both;
     ul {
       padding: 0;
       li {
         list-style: none;
         a {
-          color: #bfb;
+          color: #575;
           font-size: small;
         }
       }
