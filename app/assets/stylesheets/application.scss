@@ -66,9 +66,20 @@ html, body {
       padding: 0;
       li {
         list-style: none;
+        margin: 0.5em 0;
         a {
+          padding: 0.5em 1em;
           color: #575;
           font-size: small;
+          border: 1px solid transparent;
+          display: block;
+          text-decoration: none;
+
+          &:hover {
+            color: lighten(#575, 5%);
+            background: #acc690;
+            border: 1px solid #86ab5e;            
+          }
         }
       }
     }
