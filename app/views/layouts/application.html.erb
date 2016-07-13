@@ -14,7 +14,6 @@
   <div id="nav">
     <ul>
       <li><%= link_to 'Store', store_path %></li>
-      <li><%= link_to 'My Cart', cart_path(session[:cart_id])%></li>
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
@@ -25,7 +24,13 @@
   <div id="main">
       <%= yield %>
   </div>
+  <% if @cart %>
+  <div id="cart">
+    <%= render @cart %>
+  </div>
+  <% end %>
 </div>
+
 
 </body>
 </html>
