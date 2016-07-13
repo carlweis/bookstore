@@ -1,18 +1,10 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "neat";
+@import "scaffolds";
+@import "products";
+@import "store";
+@import "carts";
+@import "line_items";
+
 
 html, body {
   height: 100%;
@@ -21,16 +13,43 @@ html, body {
   padding: 0;
 }
 
-#banner {
+#navbar {
   background: #232F3E;
   padding: 10px;
   border-bottom: 2px solid;
-  font: small-caps 40px/40px "Times New Roman", serif;
+  font-family: arial, sans-serif;
+  font-size: 13px;
   color: #ddd;
-  text-align: center;
+  height: 99px;
 
   img {
     float: left;
+    margin: 0 0.8em;
+  }
+
+  #nav {
+    clear: both;
+    padding: 0.5em 0;    
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        margin: 0 0.5em;
+        display: inline-block;
+        a {
+          color: #ccc;
+          font-size: 13px;
+          display: block;
+          text-decoration: none;
+          text-transform: none;
+
+          &:hover {
+            color: #FFA827;
+            background: transparent;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -44,44 +63,18 @@ html, body {
 }
 
 #columns {
-  background: #c5d7b2;
+  @include outer-container;
+  background: #fff;
   height: 100%;
   min-height: 100%;
 
+
   #main {
-    margin-left: 17em;
     padding: 1em;
     background: #fff;
     height: 100%;
     min-height: 100%;
   }
 
-  #side {
-    float: left;
-    padding: 1em 2em;
-    width: 13em;
-    background: #c5d7b2;
-    clear: both;
-    ul {
-      padding: 0;
-      li {
-        list-style: none;
-        margin: 0.5em 0;
-        a {
-          padding: 0.5em 1em;
-          color: #575;
-          font-size: small;
-          border: 1px solid transparent;
-          display: block;
-          text-decoration: none;
 
-          &:hover {
-            color: lighten(#575, 5%);
-            background: #acc690;
-            border: 1px solid #86ab5e;
-          }
-        }
-      }
-    }
-  }
 }

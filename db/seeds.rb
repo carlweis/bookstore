@@ -11,6 +11,6 @@ Product.delete_all
     title: "#{product_title}#{i}",
     description: FFaker::Lorem.paragraph(1),
     price: rand(1...100).to_f,
-    image_url: "#{product_title.parameterize}.jpg"
+    image_url: "http://placehold.it/246x100"
   )
 end

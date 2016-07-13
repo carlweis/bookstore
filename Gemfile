@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'puma' # multi-threaded server
 gem 'kaminari' # pagination
+gem 'neat'    # semantic grid framework
 
 # normally this would only go under development and test group
 # it's used here for seeding production data for the example
