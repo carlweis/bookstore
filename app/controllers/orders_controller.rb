@@ -34,8 +34,11 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        # clear the cart
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
+        # send confirmation email
+        OrderNotifier.received(@order).deliver
 
         format.html { redirect_to store_url, notice: 'Thank you for your order.' }
         format.json { render :show, status: :created, location: @order }

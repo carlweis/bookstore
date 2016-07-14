@@ -1,0 +1,15 @@
+<h3>Dear <%= @order.name %>,</h3>
+
+<p>Thank you for you recent order from Railazon.</p>
+
+<p>You ordered the following items:</p>
+
+<table>
+  <tr>
+    <th colspan="2">Qty</th>
+    <th>Description</th>
+    <%= render @order.line_items %>
+  </tr>
+</table>
+
+<p>We'll send you a separate e-mail whe your order ships.</p>
