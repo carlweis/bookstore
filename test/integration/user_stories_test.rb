@@ -1,9 +1,11 @@
 require 'test_helper'
 
 class UserStoriesTest < ActionDispatch::IntegrationTest
-  fixtures :products
+  fixtures [:products]
 
   test "buying a product" do
+
+    # clear out line_items and orders
     LineItem.delete_all
     Order.delete_all
     product = products(:one)
