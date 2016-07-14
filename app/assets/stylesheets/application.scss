@@ -1,17 +1,23 @@
+@import "bourbon";
 @import "neat";
+@import "base/base";
 @import "helpers";
-@import "scaffolds";
+
 @import "products";
 @import "store";
 @import "carts";
 @import "line_items";
-
+@import "sessions";
 
 html, body {
   height: 100%;
   min-height: 100%;
   margin: 0;
   padding: 0;
+}
+section {
+  @include outer-container;
+
 }
 
 #navbar {

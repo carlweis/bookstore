@@ -1,0 +1,21 @@
+<section>
+  <div id="sign_in">
+    <h1>Sign In</h1>
+    <% if flash[:alert] %>
+      <p id="notice"><%= flash[:alert]%></p>
+    <% end %>
+    <%= form_tag do %>
+      <div>
+        <%= label_tag :name, 'Username' %>
+        <%= text_field_tag :name, params[:name] %>
+      </div>
+      <div>
+        <%= label_tag :password, 'Password' %>
+        <%= password_field_tag :password, params[:password] %>
+      </div>
+      <div>
+        <%= submit_tag 'Sign In' %>
+      </div>
+    <% end %>
+  </div>
+</section>
